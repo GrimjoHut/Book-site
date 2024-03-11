@@ -8,7 +8,16 @@ export interface IBookNavWindowProps {
 const BookNavWindow: React.FC<IBookNavWindowProps> = (props) => {
     const {setCurNavMockID, setIsShowModal} = props
 
-    return <div>BookNavWindow</div>
-}
+    const HandleClickBook = () => {
+        setCurNavMockID(3)
+        setIsShowModal(true)
+      }
+    
+      return (
+        <>
+          <button onClick={HandleClickBook}>Book</button>
+        </>
+      )
+    }
 
 export default BookNavWindow

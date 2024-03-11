@@ -8,7 +8,16 @@ export interface ILoreNavWindowProps {
 const LoreNavWindow: React.FC<ILoreNavWindowProps> = (props) => {
     const {setCurNavMockID, setIsShowModal} = props
 
-    return <div>LoreNavWindow</div>
-}
+    const HandleClickLore = () => {
+        setCurNavMockID(5)
+        setIsShowModal(true)
+      }
+    
+      return (
+        <>
+          <button onClick={HandleClickLore}>Lore</button>
+        </>
+      )
+    }
 
 export default LoreNavWindow

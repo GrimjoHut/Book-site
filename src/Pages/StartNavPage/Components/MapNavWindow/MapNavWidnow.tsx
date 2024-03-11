@@ -8,7 +8,16 @@ export interface IMapNavWindowProps {
 const MapNavWindow: React.FC<IMapNavWindowProps> = (props) => {
     const {setCurNavMockID, setIsShowModal} = props
 
-    return <div>MapNav</div>
-}
+    const HandleClickMap = () => {
+        setCurNavMockID(4)
+        setIsShowModal(true)
+      }
+    
+      return (
+        <>
+          <button onClick={HandleClickMap}>Map</button>
+        </>
+      )
+    }
 
 export default MapNavWindow

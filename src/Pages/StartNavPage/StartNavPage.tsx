@@ -1,13 +1,13 @@
 // import styles from "./StartNavigationPage.module.css"
 import { useState } from "react"
-import StartNavigationModalWindow from "./Components/StartNavigationModalWindow/StartNavigationModalWindow"
-import BesNavWindow from "./Components/BestiaryNavigationWindow/BestiaryNavigationWindow"
-import MapNavWindow from "./Components/MapNavigationWindow/MapNavigationWidnow"
-import PantheonNavWindow from "./Components/PantheonNavigationWindow/PantheonNavigationWidnow"
-import LoreNavWindow from "./Components/LoreNavigationWindow/LoreNavigationWidnow"
-import BookNavWindow from "./Components/BookNavigationWindow/BookNavigationWidnow"
+import StartNavigationModalWindow from "./Components/StartNavModWindow/StartNavModWindow"
+import BesNavWindow from "./Components/BesNavWindow/BesNavWindow"
+import MapNavWindow from "./Components/MapNavWindow/MapNavWidnow"
+import PantheonNavWindow from "./Components/GodNavWindow/GodNavWidnow"
+import LoreNavWindow from "./Components/LoreNavWidnow/LoreNavWidnow"
+import BookNavWindow from "./Components/BookNavigationWindow/BookNavWindow"
 
-const StartNavigationPage: React.FC = () => {
+const StartNavPage: React.FC = () => {
   const [curNavMockID, setCurNavMockID] = useState<number>(1)
   const [isShowModal, setIsShowModal] = useState<boolean>(false)
 
@@ -42,4 +42,4 @@ const StartNavigationPage: React.FC = () => {
   )
 }
 
-export default StartNavigationPage
+export default StartNavPage
