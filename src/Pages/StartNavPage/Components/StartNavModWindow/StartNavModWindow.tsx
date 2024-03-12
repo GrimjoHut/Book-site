@@ -19,11 +19,13 @@ const StartNavModWindow: React.FC<IStartNavModWindowProps> = (props) => {
     if (selectedStartNavMock) {
         return (
             <div className={isShowModal?"modalWindow active" : "modalWindow"}>
+                <div className="modalWindowContent">
                 <img src={selectedStartNavMock.url} alt={selectedStartNavMock.text} />
                 <button onClick={HandleClose}>Back</button>
                 <Link to={selectedStartNavMock.Path}>
                     <button>{selectedStartNavMock.text}</button>
                 </Link>
+                </div>
             </div>
         );
     }

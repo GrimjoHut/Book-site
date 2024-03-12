@@ -1,50 +1,36 @@
-.modalWindow{
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.4);
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.5s;
-    transition-delay: 0.1s;
-    pointer-events: none;
-  }
-  .modalWindow.active{
-    opacity: 1;
-    pointer-events: all;
-  }
-  .modalWindowContent{
-    padding: 4vh 5vw;
-    border-radius: 5%;
-    background-color: burlywood;
-    height: 4vh;
-    width: 10w;
-    transform: scale(0.5);
-    transition: 0.4s all;
-    position: absolute;
-    top: 15%;
-    text-align: center;
-  }
- .modalWindowContent.active{
-  transform: scale(1);
- }
- .ModalWindowButton {
-  display: inline-block;
-  padding: 5px 10px;
-  font-size: 16px;
-  font-weight: bold;
-  font-family: "Silkscreen", sans-serif;
-  background-color: #56b8bb;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  text-decoration: none;
+.modalWindow {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999; /* Добавьте z-index, чтобы модальное окно оказалось поверх остального контента */
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.5s;
+  transition-delay: 0.1s;
+  pointer-events: none;
 }
 
-.ModalWindowButton:hover {
-  background-color: #45a049;
+.modalWindow.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modalWindowContent {
+  border-radius: 5%;
+  background-color: aquamarine;
+  height: 90%; /* Используйте проценты или другие единицы для определения размеров модального окна */
+  width: 90%; /* Используйте проценты или другие единицы для определения размеров модального окна */
+  transform: scale(0.5);
+  transition: 0.4s all;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Центрируйте модальное окно по горизонтали и вертикали */
+  text-align: center;
+}
+
+.modalWindowContent.active {
+  transform: scale(1);
 }

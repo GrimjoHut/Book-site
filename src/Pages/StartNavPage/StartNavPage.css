@@ -1,0 +1,40 @@
+.StartNavBody{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: space-between;
+}
+.MiddleContainer{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 46%;
+}
+.PantheonNavWindow{
+    order:0;
+    height: 23%;
+    overflow: hidden;
+    width: 100%;
+}
+.BookNavWindow{
+    order: 1;
+    height: 54%;
+    overflow: hidden;
+    width: 100%;
+}
+.MapNavWindow{
+    height: 23%;
+    overflow: hidden;
+    order: 2;
+    width: 100%;
+}
+.LoreNavWindow{
+    height: 100%;
+    width: 27%;
+    overflow: hidden;
+}
+.BesNavWindow{
+    height: 100%;
+    width: 27%;
+    overflow: hidden;
+}
