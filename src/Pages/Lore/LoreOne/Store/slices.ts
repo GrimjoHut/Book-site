@@ -29,7 +29,6 @@ export const LoreOneSlice = createSlice({
             state.curPageLeft += 2
         },
         SetBackground: (state, action) => {
-            if (state.curBackID !== action.payload) {
                 state.curBackID = action.payload;
                 const foundBackground = ResLoreOneArr.find(background => background.ID === state.curBackID);
                 if (foundBackground) {
@@ -41,7 +40,6 @@ export const LoreOneSlice = createSlice({
                 } else {
                     state.curBack = []; // Обработка ситуации, когда объект не найден
                 }
-            }
         },
         BackgroundChange: state => {
             if (state.isShowBook === true) {
@@ -55,5 +53,5 @@ export const LoreOneSlice = createSlice({
     }
 })
 
-export const { PageBefore, PageAfter, SetBackground } = LoreOneSlice.actions
+export const { PageBefore, PageAfter, SetBackground, BackgroundChange } = LoreOneSlice.actions
 export default LoreOneSlice.reducer
