@@ -1,30 +1,30 @@
 import { useAppDispatch, useAppSelector } from "../../../app/hooks"
 import BookLoreOne from "./BookLoreOne/BookLoreOne"
 import { BackgroundShowChange } from "./Store/slices"
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const LoreOne: React.FC = () => {
-    const [isButtonShow, setisButtonShow] = useState<boolean>(true)
-    const state = useAppSelector( state => state.LoreOne)
+    const [buttonText, setButtonText] = useState<string>("Show"); // Используем useState для кнопки
+
+    const state = useAppSelector(state => state.LoreOne)
     const dispatch = useAppDispatch()
-    const BackChange = () => {
-        dispatch(BackgroundShowChange())
-        console.log(state.isShowBook)
-        let ButtonText = ""
-        if (state.isShowBook){
-            ButtonText="Show"
-        } else {
-            ButtonText=""
-        }
+
+    useEffect(() => {
+
+        setButtonText(state.isShowBook ? "Show" : "Hide");
+    }, [state.isShowBook]);
+
+    const handleBackChange = () => {
+        dispatch(BackgroundShowChange());
     }
 
- return ( 
-    <body>
-        <img className="BackImg"></img>
-        <div className={state.isShowBook? "Book" : "HiddenBook"}><BookLoreOne /></div>
-        <button onClick={BackChange} className="BackButtonS"></button>
-    </body>
- )
+    return ( 
+        <div>
+            <img className="BackImg"></img>
+            <div className={state.isShowBook ? "Book" : "HiddenBook"}><BookLoreOne /></div>
+            <button onClick={handleBackChange} className="BackButton">{buttonText}</button>
+        </div>
+    )
 }
 
 export default LoreOne
