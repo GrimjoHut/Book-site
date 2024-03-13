@@ -1,13 +1,11 @@
 import { LoreOneArr, LoreOneMock } from "../Mock/LoreOneMock"
 
-export interface ILoreOneProps {
-    
-}
+const LoreOne: React.FC = () => {
 
-const LoreOne: React.FC<ILoreOneProps> = (props) => {
-    const {} = props
-
-    return <div>LoreOne</div>
+ return ( 
+    <>
+    </>
+ )
 }
 
 export default LoreOne

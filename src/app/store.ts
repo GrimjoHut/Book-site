@@ -1,5 +1,7 @@
 import type { Action, ThunkAction } from "@reduxjs/toolkit"
 import { combineSlices, configureStore } from "@reduxjs/toolkit"
+import LoreOne from './../Pages/Lore/LoreOne/LoreOne';
+import LoreOneReducer from "./../Pages/Lore/LoreOne/Store/slices"
 
 
 
@@ -10,7 +12,7 @@ export type RootState = ReturnType<typeof store.getState>
 export const store = configureStore({
 
   reducer:{
-   
+   LoreOne: LoreOneReducer,
   }
 })
 
