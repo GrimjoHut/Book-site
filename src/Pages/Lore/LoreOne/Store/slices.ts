@@ -41,7 +41,7 @@ export const LoreOneSlice = createSlice({
                     state.curBack = []; // Обработка ситуации, когда объект не найден
                 }
         },
-        BackgroundChange: state => {
+        BackgroundShowChange: state => {
             if (state.isShowBook === true) {
                state.isShowBook = false
                state.Volume = 0.7
@@ -53,5 +53,5 @@ export const LoreOneSlice = createSlice({
     }
 })
 
-export const { PageBefore, PageAfter, SetBackground, BackgroundChange } = LoreOneSlice.actions
+export const { PageBefore, PageAfter, SetBackground, BackgroundShowChange } = LoreOneSlice.actions
 export default LoreOneSlice.reducer

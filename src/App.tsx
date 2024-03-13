@@ -1,6 +1,7 @@
 import "./App.css"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import StartNavPage from "./Pages/StartNavPage/StartNavPage"
+import LoreOne from "./Pages/Lore/LoreOne/LoreOne"
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
           {/* Обертка для компонентов */}
           <Routes>
             <Route path="/Lore" />
+            <Route path ="/Lore/LoreOne" element={<LoreOne />}></Route>
             <Route path="/Bestiary" />
             <Route path="/Map"  />
             <Route path="/Pantheon" />

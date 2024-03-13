@@ -1,10 +1,13 @@
 // import styles from "./BookLoreOne.module.css"
 
+import BookPageLeft from "./BookPages/BookPageLeft"
+import BookPageRight from "./BookPages/BookPageRight"
+
 const BookLoreOne: React.FC = () => {
     return (
         <div>
-            <Page1 />
-            <Page2 />
+            <BookPageLeft />
+            <BookPageRight />
         </div> 
     )
 }
