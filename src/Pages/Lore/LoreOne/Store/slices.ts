@@ -2,12 +2,10 @@ import { createSlice } from "@reduxjs/toolkit"
 
 import { ILoreOneState } from "./types"
 import LoreOne from "../LoreOne"
-import { ResLoreOneArr } from "../Resources/ResMockLoreOne"
+import { BackMockOne } from "../../Mock/BackgroundMockOne"
 
 
 export const initialState: ILoreOneState = {
-    curPageLeft: 0,
-    curPageRight: 0,
     curBackID: 1,
     isShowBook: true,
     Volume: 0.2,
@@ -20,38 +18,32 @@ export const LoreOneSlice = createSlice({
     name: "LoreOne",
     initialState,
     reducers: {
-        PageBefore: state => {
-            state.curPageRight -= 2
-            state.curPageLeft -= 2
-        },
-        PageAfter: state => {
-            state.curPageRight += 2
-            state.curPageLeft += 2
-        },
         SetBackground: (state, action) => {
-                state.curBackID = action.payload;
-                const foundBackground = ResLoreOneArr.find(background => background.ID === state.curBackID);
+            if (state.curBackID != action.payload) {
+                state.curBackID = action.payload
+                const foundBackground = BackMockOne.find(background => background.ID === state.curBackID);
                 if (foundBackground) {
                     state.curBack = [foundBackground]; // Присваиваем найденный объект, обернутый в массив
                     state.isShowBook = false;
                     state.Volume = 0.8;
-                    state.curBackAudio = foundBackground.audio
-                    state.curBackground = foundBackground.background
+                    state.curBackAudio = foundBackground.Backaudio
+                    state.curBackground = foundBackground.BackImage
                 } else {
-                    state.curBack = []; // Обработка ситуации, когда объект не найден
+                    console.log('Пупупу')
                 }
+            }
         },
         BackgroundShowChange: state => {
             if (state.isShowBook === true) {
-               state.isShowBook = false
-               state.Volume = 0.7
+                state.isShowBook = false
+                state.Volume = 0.7
             } else {
-            state.isShowBook = true
-            state.Volume = 0.2
+                state.isShowBook = true
+                state.Volume = 0.2
             }
         }
     }
 })
 
-export const { PageBefore, PageAfter, SetBackground, BackgroundShowChange } = LoreOneSlice.actions
+export const { SetBackground, BackgroundShowChange } = LoreOneSlice.actions
 export default LoreOneSlice.reducer
