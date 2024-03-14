@@ -2,6 +2,7 @@ import { useAppDispatch, useAppSelector } from "../../../app/hooks"
 import BookLoreOne from "./BookLoreOne/BookLoreOne"
 import { BackgroundShowChange } from "./Store/slices"
 import { useState, useEffect } from 'react';
+import "./LoreOne.css"
 
 const LoreOne: React.FC = () => {
     const [buttonText, setButtonText] = useState<string>("Show"); // Используем useState для кнопки
@@ -19,11 +20,11 @@ const LoreOne: React.FC = () => {
     }
 
     return ( 
-        <div>
-            <img className="BackImg"></img>
+        <body className="LoreOneBody">
+            <img className="BackImg" src={state.curBackground}></img>
             <div className={state.isShowBook ? "Book" : "HiddenBook"}><BookLoreOne /></div>
             <button onClick={handleBackChange} className="BackButton">{buttonText}</button>
-        </div>
+        </body>
     )
 }
 

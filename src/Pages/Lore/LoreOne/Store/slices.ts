@@ -3,9 +3,12 @@ import { createSlice } from "@reduxjs/toolkit"
 import { ILoreOneState } from "./types"
 import LoreOne from "../LoreOne"
 import { BackMockOne } from "../../Mock/BackgroundMockOne"
+import { LoreOneArr } from "../../Mock/PageMock"
 
 
 export const initialState: ILoreOneState = {
+    curPageLeftID:0,
+    curPageRightID:1,
     curBackID: 1,
     isShowBook: true,
     Volume: 0.2,
@@ -33,6 +36,18 @@ export const LoreOneSlice = createSlice({
                 }
             }
         },
+        PreviousPage: state =>{
+         if (state.curPageLeftID > 1){
+         state.curPageLeftID = state.curPageLeftID-2
+         state.curPageRightID = state.curPageRightID-2
+         }
+        },
+        NextPage: state =>{
+            if (state.curPageLeftID < LoreOneArr.length){
+            state.curPageLeftID = state.curPageLeftID+2
+            state.curPageRightID = state.curPageRightID+2
+            }
+           },
         BackgroundShowChange: state => {
             if (state.isShowBook === true) {
                 state.isShowBook = false
@@ -45,5 +60,5 @@ export const LoreOneSlice = createSlice({
     }
 })
 
-export const { SetBackground, BackgroundShowChange } = LoreOneSlice.actions
+export const { SetBackground, BackgroundShowChange, PreviousPage, NextPage } = LoreOneSlice.actions
 export default LoreOneSlice.reducer
