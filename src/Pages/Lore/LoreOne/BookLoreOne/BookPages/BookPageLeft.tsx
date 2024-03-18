@@ -15,11 +15,17 @@ const BookPageLeft: React.FC = () => {
 
 
     return (
-        <div className={curPage.Style}>
-            <div>{curPage.text}</div>
-            <div><img src={curPage.Image}></img></div>
-            <div><button onClick={HandleBack}></button></div>
+        <div className="RightTopImg">
+        <div className="PageText">
+            <div className="Text">{curPage.text}</div>
+            <div className="ButtonContainer">
+                <button onClick={HandleBack}></button>
+            </div>
         </div>
+        <div className="PageImageContainer">
+            <img className="PageImage" src={curPage.Image} />
+        </div>
+    </div>
     )
 }
 

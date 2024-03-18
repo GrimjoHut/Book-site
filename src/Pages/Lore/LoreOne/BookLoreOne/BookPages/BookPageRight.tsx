@@ -1,6 +1,7 @@
 import { LoreOneArr } from "../../../Mock/PageMock"
 import { useAppDispatch, useAppSelector } from "../../../../../app/hooks"
 import { NextPage, PreviousPage, SetBackground } from "../../Store/slices"
+import "./BookPage.css"
 
 
 const BookPageRight: React.FC = () => {

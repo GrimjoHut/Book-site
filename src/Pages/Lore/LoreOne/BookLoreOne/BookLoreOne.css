@@ -1,6 +1,30 @@
 
 .BookStyle {
-    background-color: rgb(24, 24, 58);
+    background-color: rgb(53, 53, 95);
     width: 100%; /* Установите ширину и высоту для корректного отображения */
     height: 100%; /* Установите ширину и высоту для корректного отображения */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.PageLeft{
+    width: 46%;
+    /*552.78*/
+    overflow: hidden;
+    height: 95%;
+    border-right: 0.385vh solid #0a0a0a;
+    background-color: #f5deb3;
+    border-top: 0.685vh solid rgb(207, 142, 118);
+    border-left: 0.685vh solid rgb(207, 142, 118);
+    border-bottom: 0.685vh solid rgb(207, 142, 118);
+}
+.PageRight{
+    width: 46%;
+    overflow: hidden;
+    height: 95%;
+    border-left: 0.385vh solid #0a0a0a;;
+    background-color: #f5deb3;
+    border-top: 0.685vh solid rgb(207, 142, 118);
+    border-right: 0.685vh solid rgb(207, 142, 118);
+    border-bottom: 0.685vh solid rgb(207, 142, 118);
 }

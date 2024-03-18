@@ -10,17 +10,17 @@ export interface PageMock {
 export const LoreOneArr: PageMock[] = [
     {
         Image: "https://i.pinimg.com/564x/5f/54/f2/5f54f2e1d3671a4e37f3bc094bd9e7fa.jpg",
-        text: "Bes",
+        text: "lorfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
         ID: 1,
         BackgroundID: 1,
-        Style: "TxtOnly"
+        Style: "RightTopImg"
     },
     {
         Image: "https://i.pinimg.com/564x/f0/b8/30/f0b830b65a2e9fbd4d365da8490a6f08.jpg",
         text: "God",
         ID: 2,
         BackgroundID: 1,
-        Style: "TxtOnly"
+        Style: "RightTopImg"
     },
     {
         Image: "https://i.pinimg.com/564x/f0/b8/30/f0b830b65a2e9fbd4d365da8490a6f08.jpg",

@@ -6,7 +6,7 @@ const BookLoreOne: React.FC = () => {
   return (
       <div className="BookStyle">
         <div className="PageLeft"><BookPageLeft /></div>
-        <div className="PageLeft"><BookPageRight /></div>
+        <div className="PageRight"><BookPageRight /></div>
       </div>
   )
 }

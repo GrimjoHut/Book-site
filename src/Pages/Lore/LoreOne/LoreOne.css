@@ -8,7 +8,7 @@
 }
 .Book, .HiddenBook {
     margin-top: 2.56%;
-    width: 88.6%;
+    width: 69.6%;
     height: 85.8%;
     overflow: hidden;
     z-index: 3;
@@ -59,8 +59,9 @@
     position: relative;
     display: inline-block;
     color: rgb(201, 197, 177);
+    font-size: 2vh;
     border: none;
-    border-radius: 20px;
+    border-radius: 1.85vh;
     overflow: hidden;
     border: 0.185vh solid #9aa7b4;
   }
@@ -87,8 +88,9 @@
   }
   
   .button-content {
-    position: relative;
+    position: relative; 
     z-index: 1;
+    
   }
   .BackButton:hover {
     background-color: rgba(0, 123, 255, 0.2); /* подсветка при наведении */
