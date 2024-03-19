@@ -13,6 +13,7 @@
     overflow: hidden;
     z-index: 3;
     transition: opacity 2s;
+    border: 0.85vh solid #575130;
 }
 
 .Book {
@@ -59,7 +60,7 @@
     position: relative;
     display: inline-block;
     color: rgb(201, 197, 177);
-    font-size: 2vh;
+    font-size: 1.3vh;
     border: none;
     border-radius: 1.85vh;
     overflow: hidden;

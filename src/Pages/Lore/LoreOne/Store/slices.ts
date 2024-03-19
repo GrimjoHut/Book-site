@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit"
 
 import { ILoreOneState } from "./types"
-import LoreOne from "../LoreOne"
 import { BackMockOne } from "../../Mock/BackgroundMockOne"
 import { LoreOneArr } from "../../Mock/PageMock"
 

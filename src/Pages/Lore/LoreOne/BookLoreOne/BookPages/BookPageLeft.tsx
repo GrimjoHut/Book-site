@@ -1,32 +1,39 @@
-// import styles from "./BookPageLeft.module.css"
-import { LoreOneArr } from "../../../Mock/PageMock"
-import { useAppDispatch, useAppSelector } from "../../../../../app/hooks"
-import { PreviousPage, SetBackground } from "../../Store/slices"
-
+import { LoreOneArr } from "../../../Mock/PageMock";
+import { useAppDispatch, useAppSelector } from "../../../../../app/hooks";
+import { PreviousPage, SetBackground } from "../../Store/slices";
+import { useState, useEffect } from "react";
 
 const BookPageLeft: React.FC = () => {
-    const state = useAppSelector(state => state.LoreOne)
-    const dispatch = useAppDispatch()
-    const curPage = LoreOneArr[state.curPageLeftID]
-    const HandleBack = () => {
-        dispatch(PreviousPage())
-        dispatch(SetBackground(curPage.BackgroundID))
-    }
+  const [isShowChapter, setIsShowChapter] = useState<boolean>(false);
+  const [isShowPart, setIsShowPart] = useState<boolean>(false);
+  const state = useAppSelector((state) => state.LoreOne);
+  const dispatch = useAppDispatch();
+  const curPage = LoreOneArr[state.curPageLeftID];
+
+  const HandleBack = () => {
+    dispatch(PreviousPage());
+    dispatch(SetBackground(curPage.BackgroundID));
+  };
 
 
-    return (
-        <div className="RightTopImg">
-        <div className="PageText">
-            <div className="Text">{curPage.text}</div>
-            <div className="ButtonContainer">
-                <button onClick={HandleBack}></button>
-            </div>
+  useEffect(() => {
+    setIsShowChapter(curPage.Chapter !== "");
+    setIsShowPart(curPage.Part !== "");
+  }, [curPage.Chapter, curPage.Part]);
+
+  return (
+    <div className={curPage.Style}>
+      <div className="PageContent">
+        {isShowChapter && <div className="PageChapter">{curPage.Chapter}</div>}
+        {isShowPart && <div className="PagePart">{curPage.Part}</div>}
+          <img className="PageImage" src={curPage.Image}  alt="Page" />
+          <div className="PageText"> {curPage.text}</div>
+          <button onClick={HandleBack} className="PageButton">
+            &#8592;
+          </button>
         </div>
-        <div className="PageImageContainer">
-            <img className="PageImage" src={curPage.Image} />
-        </div>
-    </div>
-    )
-}
+      </div>
+  );
+};
 
-export default BookPageLeft
+export default BookPageLeft;
