@@ -1,0 +1,21 @@
+.BodyHeader{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.LinksContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width:81.46%
+}
+.ButtonHeadCont{
+    display: flex;
+    justify-content: flex;
+    width: 9.27;
+}
+.NavLink{
+    text-align: center;
+    width: 10.56%;
+    margin-left: auto;
+}
