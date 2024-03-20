@@ -1,24 +1,22 @@
 import "./NavHeader.css"
 
-import { useState } from "react"
+export interface INavHeaderProps {
+    isShowHeader: boolean
+}
 
-const NavHeader: React.FC = () => {
-    const [isShowHeader, setIsShowHeader] = useState<boolean>(false)
+const NavHeader: React.FC<INavHeaderProps> = (props) => {
+    const {isShowHeader} = props
 
     return (
-        <body className="BodyHeader">
         <div className="LinksContainer">
-            <div className="NavLink"><a href="/Lore">Lore</a></div>
-            <div className="NavLink"><a href="/Map">Map</a></div>
-            <div className="NavLink"><a href="/Book">Book</a></div>
-            <div className="NavLink"><a href="/Pantheon">Pantheon</a></div>
-            <div className="NavLink"><a href="/Bestiary">Bestiary</a></div>
+            <a className="NavLink" href="/Lore">Lore</a>
+            <a className="NavLink" href="/Map">Map</a>
+            <a className="NavLink" href="/Book">Book</a>
+            <a className="NavLink" href="/Pantheon">Pantheon</a>
+            <a className="NavLink" href="/Bestiary">Bestiary</a>
         </div>
-            <div className="ButtonHeadCont">
-                fdfdfds
-            </div>
-        </body>
     )
 }
 
 export default NavHeader
+

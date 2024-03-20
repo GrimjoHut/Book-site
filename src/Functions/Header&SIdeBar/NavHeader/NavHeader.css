@@ -1,21 +1,23 @@
-.BodyHeader{
+.LinksContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     width: 100%;
-    display: flex;
-    flex-direction: row;
-}
-.LinksContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    width:81.46%
-}
-.ButtonHeadCont{
-    display: flex;
-    justify-content: flex;
-    width: 9.27;
-}
-.NavLink{
+    background-color: transparent;
+    height: 100%;
+    align-items: center;
+  }
+  
+  .NavLink {
+    padding-top: 0.8%;
     text-align: center;
-    width: 10.56%;
-    margin-left: auto;
-}
+    width: 12%;
+    height: 100%;
+    font-size: 2.3vh;
+    color:rgb(212, 153, 75);
+    text-decoration: none;
+  }
+  .NavLink:hover{
+    text-decoration: underline;
+    color: rgb(189, 32, 32);
+  }
