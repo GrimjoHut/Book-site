@@ -1,4 +1,4 @@
-// import styles from "./SideBar.module.css"
+import  './Sidebar.css'
 
 export interface ISideBarProps {
     isShowSideBar:boolean
@@ -8,7 +8,9 @@ const SideBar: React.FC<ISideBarProps> = (props) => {
     const {isShowSideBar} = props
 
     return (
-        <></>
+        <div className="SideContentContainer">
+            
+        </div>
     )
 }
 

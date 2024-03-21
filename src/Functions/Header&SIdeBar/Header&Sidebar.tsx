@@ -21,7 +21,7 @@ const HeaderAndSideBar: React.FC = () => {
         <div className="NavContainer"><NavHeader isShowHeader={isShowHeader} /></div>
         <button onClick={HeadTurn} className={!isShowHeader? "HeadTurnButton" : "HeadTurnButtonBack"}>&#9660;</button>
         </div>
-        <div className="SideBarContainer"><SideBar isShowSideBar={isShowSideBar}/></div>
+        <div className={isShowSideBar? "SideBarContainer" : "SideBarContainerHidden"}><SideBar isShowSideBar={isShowSideBar}/></div>
         <div className={isShowSideBar? "SideBarEffects" : "noSideBarEffects"}></div>
         </body>
     )

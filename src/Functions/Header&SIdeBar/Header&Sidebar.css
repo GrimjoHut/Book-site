@@ -51,10 +51,20 @@ transform: rotate(180deg);
 .SideBarContainer{
   position: fixed;
   height: 100%;
-  width: 20%;
+  width: 18%;
   top: 0%;
   left: 0%;
   z-index: 3;
+  transition: left 1.2s linear;
+}
+.SideBarContainerHidden{
+  position: fixed;
+  height: 100%;
+  width: 18%;
+  top: 0%;
+  left: -40%;
+  z-index: 3;
+  transition: left 1.2s linear;
 }
 .SideBarEffects, .noSideBarEffects {
   position: fixed;
@@ -64,7 +74,7 @@ transform: rotate(180deg);
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,0.6);
-  transition: opacity 2s;
+  transition: opacity 1.2s;
   z-index:2
 }
 
