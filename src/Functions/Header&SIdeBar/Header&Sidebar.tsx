@@ -17,7 +17,7 @@ const HeaderAndSideBar: React.FC = () => {
     return (
         <body id="HeadAndSide">
         <div className="HeaderContainer">
-        <button onClick={SideBarTurn} className="SideTurnButton">...</button>
+        <button onClick={SideBarTurn} className={!isShowSideBar? "SideTurnButton" : "SideTurnButtonBack"}>|||</button>
         <div className="NavContainer"><NavHeader isShowHeader={isShowHeader} /></div>
         <button onClick={HeadTurn} className={!isShowHeader? "HeadTurnButton" : "HeadTurnButtonBack"}>&#9660;</button>
         </div>
