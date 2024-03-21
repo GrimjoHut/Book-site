@@ -7,7 +7,9 @@ export interface ISideBarProps {
 const SideBar: React.FC<ISideBarProps> = (props) => {
     const {isShowSideBar} = props
 
-    return <div>SideBar</div>
+    return (
+        <></>
+    )
 }
 
 export default SideBar
