@@ -9,11 +9,11 @@ const NavHeader: React.FC<INavHeaderProps> = (props) => {
 
     return (
         <div className="LinksContainer">
-            <a className="NavLink" href="/Lore">Lore</a>
-            <a className="NavLink" href="/Map">Map</a>
-            <a className="NavLink" href="/Book">Book</a>
-            <a className="NavLink" href="/Pantheon">Pantheon</a>
-            <a className="NavLink" href="/Bestiary">Bestiary</a>
+            <a className={isShowHeader? "NavLink" : "NavLinkHidden"} href="/Lore">Lore</a>
+            <a className={isShowHeader? "NavLink" : "NavLinkHidden"} href="/Map">Map</a>
+            <a className={isShowHeader? "NavLink" : "NavLinkHidden"} href="/Book">Book</a>
+            <a className={isShowHeader? "NavLink" : "NavLinkHidden"} href="/Pantheon">Pantheon</a>
+            <a className={isShowHeader? "NavLink" : "NavLinkHidden"} href="/Bestiary">Bestiary</a>
         </div>
     )
 }
